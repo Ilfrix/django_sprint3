@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
-from blog.models import Post, Category
+from blog.models import Post
 from django.db.models import Q
 from datetime import datetime as dt
 
 
 def index(request):
     template = 'blog/index.html'
-    
+
     posts = Post.objects.all().filter(
         Q(is_published=True)
         & Q(category__is_published=True)
