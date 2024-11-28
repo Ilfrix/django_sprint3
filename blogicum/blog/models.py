@@ -12,7 +12,7 @@ class Category(models.Model):
         unique=True,
         verbose_name='Идентификатор',
         help_text=('Идентификатор страницы для URL; разрешены символы'
-                   'латиницы, цифры, дефис и подчёркивание.')
+                   ' латиницы, цифры, дефис и подчёркивание.')
     )
     is_published = models.BooleanField(
         default=True,
